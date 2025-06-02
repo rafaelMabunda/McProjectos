@@ -4,7 +4,7 @@
             <v-sheet flat class="cardServices">
                 <div class="serviceTitle">
                     <div class="d-flex justify-center">
-                        <p>Pricing</p> 
+                        <h4>Pricing</h4> 
                     </div>
                     <div class="d-flex justify-center">
                         <h1>Plans We Offer</h1>
@@ -96,7 +96,7 @@ const plans = ref([
 }
 
 
-.serviceTitle p{
+.serviceTitle h4{
     color: #fc5e28;
 }
 

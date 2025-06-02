@@ -4,7 +4,7 @@
             <v-sheet flat class="cardServices bg-grey-lighten-4">
                 <div class="serviceTitle">
                     <div class="d-flex justify-center">
-                        <p>Our Blog</p> 
+                        <h4>Our Blog</h4> 
                     </div>
                     <div class="d-flex justify-center">
                         <h1>Latest Updates</h1>
@@ -28,8 +28,28 @@
                                 <h2>{{ info.text }}</h2>
                             </div>
 
-                            <div class="floatingDiv">
-                                <p>Setembro</p>
+                            <div class="floatingDiv d-flex align-center justify-center">
+                                <v-btn 
+                                color="white" 
+                                variant="text" 
+                                class="pa-0 mr-1" 
+                                size="x-small" 
+                                prepend-icon="mdi-calendar-month-outline"
+                                >SEPT.06,2025</v-btn>
+                                <v-btn 
+                                color="white" 
+                                variant="text" 
+                                class="pa-0 mr-1" 
+                                size="x-small" 
+                                prepend-icon="mdi-account"
+                                >ADMIN</v-btn>
+                                <v-btn 
+                                color="white" 
+                                variant="text" 
+                                class="pa-0" 
+                                size="x-small" 
+                                prepend-icon="mdi-chat"
+                                >3</v-btn>
                             </div>
 
                             <v-card-actions class="px-8 mb-8 mt-3">
@@ -78,7 +98,7 @@ const blogInfos = ref(
 }
 
 
-.serviceTitle p{
+.serviceTitle h4{
     color: #fc5e28;
 }
 .parentCard {
@@ -92,6 +112,5 @@ const blogInfos = ref(
     width: 200px;
     height: 33px;
     background-color: #fc5e28;
-    color: white;
 }
 </style>
