@@ -5,7 +5,12 @@
   <ServiceTitle />
   <v-sheet rounded="0" color="grey-lighten-4" class="serviceCardParent">
     <ServicesView />
-    <CustomerFeedback />
+    <CompletedProjects />
+  </v-sheet>
+  <PricingProjects />
+<CustomerFeedback />
+  <v-sheet rounded="0" color="grey-lighten-4">
+    <CompanyBlog />
   </v-sheet>
 </template>
 
@@ -16,6 +21,9 @@ import AboutView from './AboutView.vue';
 import ServiceTitle from './ServiceTitle.vue';
 import ServicesView from './ServicesView.vue';
 import CustomerFeedback from './CustomerFeedback.vue';
+import CompletedProjects from './CompletedProjects.vue';
+import PricingProjects from './PricingProjects.vue';
+import CompanyBlog from './CompanyBlog.vue';
 
 </script>
 <style>

@@ -1,12 +1,4 @@
 <template>
-    
-
-    <!-- <v-card 
-    rounded="0" 
-    color="grey-lighten-4" 
-    class="serviceCardParent" 
-    flat></v-card> -->
-
     <v-container>
         <v-row>
             <v-col
@@ -29,13 +21,12 @@
                                 </div>
                                 <div class="avatarCard d-flex justify-center">
                                     <v-avatar
+                                     class="adjustImage"
                                     :color="isHovering? '#fc5e28' : 'white'" 
                                     :size="85">
-                                        <v-icon 
-                                        :color="isHovering? 'white' : '#fc5e28'"
-                                        size="50" 
-                                        icon="mdi-account" 
-                                        ></v-icon>
+                                        <v-img
+                                        :src="isHovering ? item.icon1 : item.icon2"
+                                        ></v-img>
                                     </v-avatar>
                                 </div>
                                 <div class="titleCard d-flex justify-center flex-wrap">
@@ -68,19 +59,22 @@ const cardProperties = ref([
     {
         title: 'Architecture',
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia',
-        icon: 'mdi-account',
+        icon1: require('../assets/architect1.png'),
+        icon2: require('../assets/architect.png'),
         img: require('../assets/Screenshot (857).png')
     },
     {
         title: 'Renovation',
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia',
-        icon: 'mdi-account',
+        icon1: require('../assets/worker11.png'),
+        icon2: require('../assets/worker1.png'),
         img: require('../assets/Screenshot (856).png')
     },
     {
         title: 'Construction',
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia',
-        icon: 'mdi-account',
+        icon1: require('../assets/hammer(1).png'),
+        icon2: require('../assets/hammer.png'),
         img: require('../assets/Screenshot (845).png')
     },
 ]) 
@@ -136,5 +130,9 @@ const cardProperties = ref([
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.adjustImage {
+    padding: 17px;
 }
 </style>
