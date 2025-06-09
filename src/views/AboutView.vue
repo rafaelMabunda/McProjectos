@@ -66,7 +66,33 @@
     </v-container>
   </div>
 </template>
-<style>
+<script setup>
+
+// const observer = new IntersectionObserver(
+//     (entries) => {
+//         entries.forEach((entry) => {
+//             if(entry.isIntersecting) {
+//                 entry.target.classList.add('in-view')
+//                 entry.target.classList.remove('not-in-view')
+//             } else {
+//                 entry.target.classList.remove('in-view')
+//                 entry.target.classList.add('not-in-view')
+//             }
+//         })
+//     },
+//     {
+//         rootMargin: '0px',
+//         threshold: [0, 0.1, 1],
+//     },
+// )
+
+// const tags = document.querySelectorAll('figure, h2, div')
+
+// tags.forEach((tag) => {
+//     observer.observe(tag)
+// })
+</script>
+<style scoped>
 .about {
   margin-top: 300px;
 }
@@ -107,4 +133,22 @@ line-height: normal;
 
 }
 
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translate(0, 2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.in-view {
+    animation: fade .5s .5s both
+}
+
+.not-in-view {
+    opacity: 0;
+}
 </style>

@@ -1,12 +1,18 @@
 <template>
   <v-app>
     <v-main>
+      <ContactBar />
+      <HomePage />
+      <NavigationBar />
       <router-view/>
     </v-main>
   </v-app>
 </template>
 
 <script setup>
+import NavigationBar from './views/NavigationBar.vue';
+import ContactBar from './components/ContactBar.vue';
+import HomePage from './components/HomePage.vue';
 
 </script>
 <style>

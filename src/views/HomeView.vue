@@ -1,6 +1,8 @@
 <template>
-  <ContactBar />
-  <HomePage />
+  <div class="homeOrganizer">
+    <HomePageImg />
+    <CompanyAtributies />
+  </div>
   <AboutView />
   <ServiceTitle />
   <v-sheet rounded="0" color="grey-lighten-4" class="serviceCardParent">
@@ -8,7 +10,7 @@
     <CompletedProjects />
   </v-sheet>
   <PricingProjects />
-<CustomerFeedback />
+  <CustomerFeedback />
   <v-sheet rounded="0" color="grey-lighten-4 backgroundDefiner">
     <CompanyBlog />
   </v-sheet>
@@ -16,8 +18,8 @@
 </template>
 
 <script setup>
-import ContactBar from '../components/ContactBar.vue';
-import HomePage from '@/components/HomePage.vue';
+import HomePageImg from './HomePageImg.vue';
+import CompanyAtributies from './CompanyAtributies.vue';
 import AboutView from './AboutView.vue';
 import ServiceTitle from './ServiceTitle.vue';
 import ServicesView from './ServicesView.vue';
@@ -29,6 +31,9 @@ import FooterSection from './FooterSection.vue';
 
 </script>
 <style>
+.homeOrganizer {
+  position: relative;
+}
 .serviceCardParent {
   position: relative;
   margin-top: 250px;
